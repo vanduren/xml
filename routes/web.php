@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ReadXmlStandardController;
 use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,3 +20,5 @@ Route::get('/', function () {
 });
 
 Route::get('/test', [TestController::class, 'test'])->name('test');
+Route::get('/standard', [ReadXmlStandardController::class, 'index'])->name('read-xml-standard');
+
